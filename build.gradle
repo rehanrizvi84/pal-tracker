@@ -14,7 +14,7 @@ dependencies {
 }
 
 bootRun.environment([
-        "WELCOME_MESSAGE": "hello",
+        "WELCOME_MESSAGE": "hello local",
         "PORT":"8888",
         "MEMORY_LIMIT":"512",
         "CF_INSTANCE_INDEX":"123",
