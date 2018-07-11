@@ -17,22 +17,26 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
         return timeEntry;
     }
 
-    public TimeEntry find(long id) {
+    @Override
+    public TimeEntry find(Long id) {
         return timeEntries.get(id);
     }
 
+    @Override
     public List<TimeEntry> list() {
         List<TimeEntry> list = new ArrayList<TimeEntry>(timeEntries.values());
         return list;
     }
 
-    public TimeEntry update(long id, TimeEntry timeEntry) {
+    @Override
+    public TimeEntry update(Long id, TimeEntry timeEntry) {
         timeEntry.setId(id);
         timeEntries.put(id, timeEntry);
         return timeEntry;
     }
 
-    public void delete(long id) {
+    @Override
+    public void delete(Long id) {
         timeEntries.remove(id);
     }
 }
